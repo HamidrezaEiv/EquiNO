@@ -1,0 +1,2 @@
+trained_models/**/*.pb filter=lfs diff=lfs merge=lfs -text
+data/**/**/*.pkl filter=lfs diff=lfs merge=lfs -text
