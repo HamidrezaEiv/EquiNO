@@ -5,7 +5,7 @@ EquiNO is a model for multiscale simulations in solid mechanics that leverages p
 
 ## Abstract
 <p align="justify">
-Multiscale problems are ubiquitous in physics. Numerical simulations of such problems by solving partial differential equations (PDEs) at high resolution are computationally too expensive for many-query scenarios, e.g., uncertainty quantification, remeshing applications, topology optimization, and so forth. This limitation has motivated the application of data-driven surrogate models, where the microscale computations are *substituted* with a surrogate, usually acting as a black-box mapping between macroscale quantities. These models offer significant speedups but struggle with incorporating microscale physical constraints, such as the balance of linear momentum and constitutive models. In this contribution, we propose Equilibrium Neural Operator (EquiNO) as a *complementary* physics-informed PDE surrogate for predicting microscale physics and compare it with variational physics-informed neural and operator networks. Our framework, applicable to the so-called multiscale FE² computations, introduces the FE-OL approach by integrating the finite element (FE) method with operator learning (OL). We apply the proposed FE-OL approach to quasi-static problems of solid mechanics. The results demonstrate that FE-OL can yield accurate solutions even when confronted with a restricted dataset during model development. Our results show that EquiNO achieves speedup factors exceeding 8000-fold compared to traditional methods and offers an optimal balance between data-driven and physics-based strategies.
+Multiscale problems are ubiquitous in physics. Numerical simulations of such problems by solving partial differential equations (PDEs) at high resolution are computationally too expensive for many-query scenarios, e.g., uncertainty quantification, remeshing applications, topology optimization, and so forth. This limitation has motivated the application of data-driven surrogate models, where the microscale computations are <em>substituted</em> with a surrogate, usually acting as a black-box mapping between macroscale quantities. These models offer significant speedups but struggle with incorporating microscale physical constraints, such as the balance of linear momentum and constitutive models. In this contribution, we propose Equilibrium Neural Operator (EquiNO) as a <em>complementary</em> physics-informed PDE surrogate for predicting microscale physics and compare it with variational physics-informed neural and operator networks. Our framework, applicable to the so-called multiscale FE² computations, introduces the FE-OL approach by integrating the finite element (FE) method with operator learning (OL). We apply the proposed FE-OL approach to quasi-static problems of solid mechanics. The results demonstrate that FE-OL can yield accurate solutions even when confronted with a restricted dataset during model development. Our results show that EquiNO achieves speedup factors exceeding 8000-fold compared to traditional methods and offers an optimal balance between data-driven and physics-based strategies.
 <p>
 
 ![EquiNO Architecture](algo.png)
@@ -61,17 +61,20 @@ To set up and use EquiNO, follow these steps:
 3. **Train a model:**
    - For EquiNO:
      ```sh
-     python training_equino.py
+     python ./codes/training_equino.py
      ```
    - For PINNs:
      ```sh
-     python training_pinn.py
+     python ./codes/training_pinn.py
      ```
    - For VPIONets:
      ```sh
-     python training_vpionet.py
+     python ./codes/training_vpionet.py
      ```
-
+3. **Inference:**
+    ```sh
+    python ./codes/testing_NOs.py
+    ```
 ## License
 
 EquiNO is licensed under the [MIT License](https://opensource.org/licenses/MIT).
