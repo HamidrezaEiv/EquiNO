@@ -43,6 +43,10 @@ Explore our Hugging Face application to interact with models designed for online
 
 ![EquiNO on Hugging Face](RVEsim.png)
 
+## Requirements
+- Python 3.9
+- Other dependencies (see `requirements.txt`)
+
 ## Installation and Usage
 
 To set up and use EquiNO, follow these steps:
