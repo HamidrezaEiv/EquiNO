@@ -1,7 +1,8 @@
 cmcrameri
 jax==0.4.20
+jaxlib==0.4.20
 joblib==1.2.0
-matplotlib==3.10.1
+matplotlib
 numpy==1.24.3
 pandas==1.4.4
 pyDOE==0.3.8
