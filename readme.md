@@ -61,19 +61,23 @@ To set up and use EquiNO, follow these steps:
 3. **Train a model:**
    - For EquiNO:
      ```sh
-     python ./codes/training_equino.py
+     cd codes
+     python training_equino.py
      ```
    - For PINNs:
      ```sh
-     python ./codes/training_pinn.py
+     cd codes
+     python training_pinn.py
      ```
    - For VPIONets:
      ```sh
-     python ./codes/training_vpionet.py
+     cd codes
+     python training_vpionet.py
      ```
 3. **Inference:**
     ```sh
-    python ./codes/testing_NOs.py
+    cd codes
+    python testing_NOs.py
     ```
 ## License
 
