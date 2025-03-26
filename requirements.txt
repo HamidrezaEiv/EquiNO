@@ -1,4 +1,4 @@
-cmcrameri==0.0.0
+cmcrameri
 jax==0.4.20
 joblib==1.2.0
 matplotlib==3.10.1
